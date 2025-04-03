@@ -36,7 +36,12 @@ function calculate() {
     const prev = parseFloat(previousOperand);
     const current = parseFloat(currentOperand);
     
-    (isNaN(prev)) return;
+    if (isNaN(prev) || isNaN(current)) {
+        clearAll();
+        currentOperand = 'Erro';
+        updateDisplay();
+        return;
+    }
     
     switch (operation) {
         case '+':
@@ -49,15 +54,20 @@ function calculate() {
             computation = prev * current;
             break;
         case '/':
-            computation = prev / current;
+            computation = current === 0 ? 'Erro' : prev / current;
             break;
         default:
             return;
     }
     
-    currentOperand = computation.toString();
-    operation = undefined;
-    previousOperand = '';
+    if (computation === 'Erro') {
+        clearAll();
+        currentOperand = 'Erro';
+    } else {
+        currentOperand = computation.toString();
+        operation = undefined;
+        previousOperand = '';
+    }
     updateDisplay();
 }
 
@@ -69,7 +79,7 @@ function clearAll() {
 }
 
 function deleteLastChar() {
-    if (currentOperand.length === 1) {
+    if (currentOperand === 'Erro' || currentOperand.length === 1) {
         currentOperand = '0';
     } else {
         currentOperand = currentOperand.slice(0, -1);
