@@ -36,7 +36,7 @@ function calculate() {
     const prev = parseFloat(previousOperand);
     const current = parseFloat(currentOperand);
     
-    if (isNaN(prev) return;
+    (isNaN(prev)) return;
     
     switch (operation) {
         case '+':
