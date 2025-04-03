@@ -12,24 +12,24 @@
             <div class="previous-operand" id="previous-operand"></div>
             <div class="current-operand" id="current-operand">0</div>
         </div>
-        <button class="span-two" onclick="clearAll()">AC</button>
-        <button onclick="deleteLastChar()">DEL</button>
-        <button onclick="appendOperator('/')">÷</button>
-        <button onclick="appendNumber('7')">7</button>
-        <button onclick="appendNumber('8')">8</button>
-        <button onclick="appendNumber('9')">9</button>
-        <button onclick="appendOperator('*')">×</button>
-        <button onclick="appendNumber('4')">4</button>
-        <button onclick="appendNumber('5')">5</button>
-        <button onclick="appendNumber('6')">6</button>
-        <button onclick="appendOperator('-')">-</button>
-        <button onclick="appendNumber('1')">1</button>
-        <button onclick="appendNumber('2')">2</button>
-        <button onclick="appendNumber('3')">3</button>
-        <button onclick="appendOperator('+')">+</button>
-        <button onclick="appendNumber('0')">0</button>
-        <button onclick="appendNumber('.')">.</button>
-        <button class="span-two" onclick="calculate()">=</button>
+        <button class="span-two" id="clear">AC</button>
+        <button id="delete">DEL</button>
+        <button data-operation>÷</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>-</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>+</button>
+        <button data-number>0</button>
+        <button id="decimal">.</button>
+        <button class="span-two" id="equals">=</button>
     </div>
     <script src="script.js"></script>
 </body>

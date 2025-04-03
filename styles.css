@@ -73,23 +73,23 @@ button:active {
     grid-column: span 2;
 }
 
-button[onclick*="appendOperator"] {
+button[data-operation] {
     background-color: #ff9500;
 }
 
-button[onclick*="appendOperator"]:hover {
+button[data-operation]:hover {
     background-color: #ffaa33;
 }
 
-button[onclick="clearAll()"] {
+#clear {
     background-color: #ff3b30;
 }
 
-button[onclick="deleteLastChar()"] {
+#delete {
     background-color: #a5a5a5;
     color: #1a1a1a;
 }
 
-button[onclick="calculate()"] {
+#equals {
     background-color: #4cd964;
 }
